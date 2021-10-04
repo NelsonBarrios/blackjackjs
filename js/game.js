@@ -139,11 +139,14 @@ function init(){
 				var hit = new createjs.Shape();
 				hit.graphics.beginFill('#000').drawRect(0, 0, submitText.getMeasuredWidth(), submitText.getMeasuredHeight());
 				submitText.hitArea = hit;
+				// Start input
 				submitText.addEventListener('click', function(event){
 					player.name.value = nameInput._visiblePreCursorText.text || 'Player 1';
 					localStorage.setItem('BlackJackJs-userName', player.name.value);
 					localStorage.setItem('BlackJackJs-funds', '1000');
 					localStorage.setItem('BlackJackJs-chips', JSON.stringify(player.chips));
+					var myAudio = document.getElementById("play");
+					myAudio.paused ? myAudio.play() : myAudio.pause();
 					game.start();
 				});
 				this.startContainer.addChild(titleText, nameInput, submitText);
