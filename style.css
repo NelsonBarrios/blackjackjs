@@ -21,7 +21,7 @@ canvas {
 	border: 1px solid #000;
 }
 
-@media only screen and (max-width:480px){
+@media only screen and (min-width:480px){
 	canvas{
 		height: 80vh;
 	}
