@@ -1,12 +1,22 @@
+html{
+	width: 100vw;
+	height: 100vh;
+}
+
 body {
 	background-color: #000;
 	/*background-image: url(http://molotilo.com/wp-content/uploads/2016/07/green-carpet.jpg);*/
-	/*background-size: cover;*/
+	/*background-size: 100% 100%;*/
 	text-align: center;
+	width: 0vw;
+	height: 100vh;
 }
 
 canvas {
 	background-image: url(assets/PNG/background.png);
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100% 94%;
+	width: 99vw;
+	height: 98vh;
 	border: 1px solid #000;
 }
