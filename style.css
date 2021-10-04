@@ -24,6 +24,6 @@ canvas {
 @media only screen and (max-width:480px){
 	canvas{
 		width: 99vw;
-		height: 87vh;
+		height: 84vh;
 	}
 }
