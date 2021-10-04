@@ -20,3 +20,10 @@ canvas {
 	height: 98vh;
 	border: 1px solid #000;
 }
+
+@media only screen and (max-width:480px){
+	canvas{
+		width: 99vw;
+		height: 93vh;
+	}
+}
