@@ -14,14 +14,14 @@ function init(){
 		},
 		startContainer: false,
 		buttons: [
-			new Button('Hit', '#fff', 100, 100, () => player.hit()),
-			new Button('Stand', '#fff', 200, 100, () => player.stand()),
-			new Button('Go', '#fff', 935, -430, () => game.go()),
-			new Button('Insurance', '#fff', 100, -80, () => player.insure()),
+			new Button('Pedir', '#fff', 100, 100, () => player.hit()),
+			new Button('Pararse', '#fff', 200, 100, () => player.stand()),
+			new Button('Comenzar', '#fff', 935, -430, () => game.go()),
+			new Button('Seguro', '#fff', 100, -80, () => player.insure()),
 			//new Button('Split', '#fff', 100, -40, () => l('split')),
-			new Button('Double', '#fff', 100, -40, () => player.double()),
-			new Button('Give up', '#fff', 100, 0, () => player.giveUp()),
-			new Button('New game', '#fff', 100, -490, () => game.reset())
+			new Button('Doblar', '#fff', 100, -40, () => player.double()),
+			new Button('Retirarse', '#fff', 100, 0, () => player.giveUp()),
+			new Button('Nuevo juego', '#fff', 100, -490, () => game.reset())
 		],
 		buttonContainer: false,
 		dealtChipContainer: false,
@@ -130,7 +130,7 @@ function init(){
 				nameInput._hiddenInput.focus();
 				nameInput.x = 430;
 				nameInput.y = 400;
-				nameInput._visiblePostCursorText.text = 'Your name';
+				nameInput._visiblePostCursorText.text = 'Nickname';
 
 				var submitText = new createjs.Text('OK', '30px Arial', '#fff');
 				submitText.x = 640;
@@ -141,7 +141,7 @@ function init(){
 				submitText.hitArea = hit;
 				// Start input
 				submitText.addEventListener('click', function(event){
-					player.name.value = nameInput._visiblePreCursorText.text || 'Player 1';
+					player.name.value = nameInput._visiblePreCursorText.text || 'Tú';
 					localStorage.setItem('BlackJackJs-userName', player.name.value);
 					localStorage.setItem('BlackJackJs-funds', '1000');
 					localStorage.setItem('BlackJackJs-chips', JSON.stringify(player.chips));
@@ -438,7 +438,7 @@ function init(){
 
 		deck: [],
 		name: {
-			value: 'Player 1',
+			value: 'Tú',
 			text: false,
 		},
 		cardsContainer: false,
