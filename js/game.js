@@ -66,7 +66,7 @@ function init(){
 			stage.removeAllChildren();
 			var gameOverText = new createjs.Text('Game Over', '50px Arial', '#fff');
 			gameOverText.center(1, 1);
-			var replayText = new createjs.Text('Replay', '30px Arial', '#fff');
+			var replayText = new createjs.Text('Repetición', '30px Arial', '#fff');
 			replayText.center(1);
 			replayText.y = 400;
 			var hit = new createjs.Shape();
@@ -119,7 +119,7 @@ function init(){
 			}
 			else{
 				this.startContainer = new createjs.Container();
-				var titleText = new createjs.Text('BlackJackJs', '60px Arial', '#fff');
+				var titleText = new createjs.Text('Blackjack', '60px Arial', '#fff');
 				titleText.center(1, 1);
 				var nameInput = new TextInput();
 				// autofocus
