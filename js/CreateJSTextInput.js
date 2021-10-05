@@ -11,7 +11,7 @@ class TextInput extends createjs.Container {
 
     // Text Settings
     this.placeHolder = '';
-    this.placeHolderTextColor = '#999';
+    this.placeHolderTextColor = '#808080';
     this.textColor = '#222';
     this.fontSize = 20;
     this.cursorWidth = 2;
