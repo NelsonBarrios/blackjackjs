@@ -64,7 +64,7 @@ function init(){
 		over: function(){
 			['userName', 'chips', 'funds'].forEach(v => localStorage.removeItem('BlackJackJs-' + v));
 			stage.removeAllChildren();
-			var gameOverText = new createjs.Text('Game Over', '50px Arial', '#fff');
+			var gameOverText = new createjs.Text('Juego Terminado', '50px Arial', '#fff');
 			gameOverText.center(1, 1);
 			var replayText = new createjs.Text('Repetición', '30px Arial', '#fff');
 			replayText.center(1);
