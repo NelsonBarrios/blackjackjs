@@ -4,7 +4,7 @@ Black jack game creado en Javascript con CreateJs
 
 Click en saldo and comenzar a jugar !  
 
-## Chips Values :  
+## Valores de moneda :  
 500 : ![500](https://raw.githubusercontent.com/Oli8/BlackJackJs/master/assets/PNG/Chips/chipBlueWhite_side.png)  
 100 : ![100](https://raw.githubusercontent.com/Oli8/BlackJackJs/master/assets/PNG/Chips/chipBlackWhite_side.png)   
 25 : ![25](https://raw.githubusercontent.com/Oli8/BlackJackJs/master/assets/PNG/Chips/chipGreenWhite_side.png)    
