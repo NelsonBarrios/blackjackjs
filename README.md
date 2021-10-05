@@ -1,8 +1,8 @@
 # BlackJackJs  
-Black jack game made in Javascript with CreateJs  
+Black jack game creado en Javascript con CreateJs  
 [demo](https://nelsonbarrios.github.io/blackjackjs)  
 
-Click on a chip to bet and start playing !  
+Click en saldo and comenzar a jugar !  
 
 ## Chips Values :  
 500 : ![500](https://raw.githubusercontent.com/Oli8/BlackJackJs/master/assets/PNG/Chips/chipBlueWhite_side.png)  
@@ -12,8 +12,8 @@ Click on a chip to bet and start playing !
 1: ![1](https://raw.githubusercontent.com/Oli8/BlackJackJs/master/assets/PNG/Chips/chipWhiteBlue_side.png)  
 
 ## Options :
-**Double**  
-**Insurance**  
-**Give up**  
+**Doblar**  
+**Seguro**  
+**Abandonar**  
 
-Thanks to [Kenney Vleugels](http://www.kenney.nl) for the assets!  
+Créditos [Kenney Vleugels](http://www.kenney.nl) por los assets!  
