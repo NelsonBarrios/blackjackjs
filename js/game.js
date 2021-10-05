@@ -66,7 +66,7 @@ function init(){
 			stage.removeAllChildren();
 			var gameOverText = new createjs.Text('Juego Terminado', '50px Arial', '#fff');
 			gameOverText.center(1, 1);
-			var replayText = new createjs.Text('Repetición', '30px Arial', '#fff');
+			var replayText = new createjs.Text('Juega de Nuevo', '30px Arial', '#fff');
 			replayText.center(1);
 			replayText.y = 400;
 			var hit = new createjs.Shape();
