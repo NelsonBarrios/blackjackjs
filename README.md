@@ -1,6 +1,6 @@
 # BlackJackJs  
 Black jack game made in Javascript with CreateJs  
-[demo](https://oli8.github.io/BlackJackJs)  
+[demo](https://nelsonbarrios.github.io/blackjackjs)  
 
 Click on a chip to bet and start playing !  
 
