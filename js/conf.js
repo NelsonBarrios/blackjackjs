@@ -43,24 +43,24 @@ const deckNumber = 6;
 const suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades'];
 
 const messages = {
-	bet: 'Apuesta !',
-	win: 'Ganas !',
-	draw: 'Empate !',
-	lose: 'Croupier gana',
+	bet: 'Bet !',
+	win: 'You win !',
+	draw: 'Draw !',
+	lose: 'Dealer wins',
 	warning: {
-		bet: {msg: 'Tienes que apostar primero', x: 750},
-		insurance: {msg: 'No puedes usar un seguro', x: 725},
-		insured: {msg:'seguro utilizado !', x: 800},
-		double: {msg: 'No puedes doblar ahora', x: 725},
-		funds: {msg: "No tienes fondos suficientes", x: 680},
-		hit: {msg: 'Ya no puedes pegar', x: 720},
-		doubled: {msg: 'Apuesta duplicada !', x: 800},
-		giveUp: {msg: 'No puedes rendirte ahora !', x: 720},
-		gaveUp: {msg: 'Te rendiste', x: 800}
+		bet: {msg: 'You need to bet first', x: 750},
+		insurance: {msg: 'You can not use insurance', x: 725},
+		insured: {msg:'insurance used !', x: 800},
+		double: {msg: 'You can not double now', x: 725},
+		funds: {msg: "You haven't got enough funds", x: 680},
+		hit: {msg: 'You can not hit anymore', x: 720},
+		doubled: {msg: 'Bet doubled !', x: 800},
+		giveUp: {msg: 'You can not give up now !', x: 720},
+		gaveUp: {msg: 'You gave up', x: 800}
 	},
 };
 
-const width = 1085;
+const width = 1100;
 const height = 650;
 
 createjs.Text.prototype.center = function(x = true, y = false){
