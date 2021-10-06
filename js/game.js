@@ -169,6 +169,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
+			//this.addCount
 		},
 
 		go: function(){
@@ -240,10 +241,10 @@ function init(){
 					total += 11;
 			});
 
-			return total;
+			return total; //mostrar total contado
 		},
 
-		distributeCard: function(to, hidden = false){
+		distributeCard: function(to, hidden = false){//distribute of cards and deleting it
 			var index = rand(0, this.deck.length - 1);
 			var card = this.deck[index];
 			if(hidden) card.hidden = true;
@@ -252,20 +253,20 @@ function init(){
 				bank.deck.push(card);
 			else if(to === 'player')
 				player.deck.push(card);
-
+			//all save in bank.deck.card & player.deck.card
 			this.deck.splice(index, 1);
 			this.displayCard(card, to);
 		},
 
 		displayCard: function(card, owner){
 			if(!bank.cardsContainer){
-				bank.cardsContainer = new createjs.Container();
+				bank.cardsContainer = new createjs.Container(); // bank.cardContainer.x = 450
 				bank.cardsContainer.y = -100;
 				stage.addChild(bank.cardsContainer);
 				bank.cardsContainer.x = 450;
 			}
 			if(!player.cardsContainer){
-				player.cardsContainer = new createjs.Container();
+				player.cardsContainer = new createjs.Container(); // player.cardContainer.x = 450
 				player.cardsContainer.y = 300;
 				stage.addChild(player.cardsContainer);
 				player.cardsContainer.x = 450;
@@ -400,7 +401,7 @@ function init(){
 
 			if(bankScore > 21)
 				player.win();
-			else if(bankScore >= 17 && bankScore <= 21){
+			else if(bankScore >= 17 && bankScore <= 21){// if (bankScore > playerScore) player.lose() else player.win()
 				if(playerScore > bankScore)
 					player.win();
 				else
@@ -437,7 +438,7 @@ function init(){
 
 	};
 
-	var player = {
+	var player = { //here api
 
 		deck: [],
 		name: {
@@ -449,7 +450,7 @@ function init(){
 		blackjack: false,
 		insurance: false,
 		doubled: false,
-		funds: 1000,
+		funds: 1000, 
 		fundsText: {
 			text: false,
 			init: function(){
@@ -464,7 +465,7 @@ function init(){
 		},
 		betted: false,
 		dealt: 0,
-		chips: game.balanceChips(1000),
+		chips: game.balanceChips(1000), //api funds chip
 
 		hit: function(){
 			if(this.betted){
@@ -550,7 +551,7 @@ function init(){
 				createjs.Sound.play('win');
 				player.funds += player.blackjack ? player.dealt * 3 : player.dealt * 2;
 				game.end();
-				player.fundsText.update();
+				player.fundsText.update(); //API update founds in game over.
 			}, 2000);
 		},
 
@@ -585,7 +586,7 @@ function init(){
 			}, 2000);
 		},
 
-		store: function(){
+		store: function(){// saved temporaly in localStorage: " funds and chips "
 			localStorage.setItem('BlackJackJs-funds', this.funds);
 			localStorage.setItem('BlackJackJs-chips', JSON.stringify(this.chips));
 		},
