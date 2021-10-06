@@ -15,14 +15,14 @@ function init(){
 		},
 		startContainer: false,
 		buttons: [
-			new Button('Hit', '#fff', 100, 100, () => player.hit()),
-			new Button('Stand', '#fff', 200, 100, () => player.stand()),
-			new Button('Go', '#fff', 935, -430, () => game.go()),
-			new Button('Insurance', '#fff', 100, -80, () => player.insure()),
+			new Button('Pedír', '#fff', 100, 100, () => player.hit()),
+			new Button('Pararse', '#fff', 200, 100, () => player.stand()),
+			new Button('Comenzar', '#fff', 935, -430, () => game.go()),
+			new Button('Seguro', '#fff', 100, -80, () => player.insure()),
 			//new Button('Split', '#fff', 100, -40, () => l('split')),
-			new Button('Double', '#fff', 100, -40, () => player.double()),
-			new Button('Give up', '#fff', 100, 0, () => player.giveUp()),
-			new Button('New game', '#fff', 100, -490, () => game.reset())
+			new Button('Doblar', '#fff', 100, -40, () => player.double()),
+			new Button('Abandonar', '#fff', 100, 0, () => player.giveUp()),
+			new Button('Nuevo juego', '#fff', 100, -490, () => game.reset())
 		],
 		buttonContainer: false,
 		dealtChipContainer: false,
@@ -66,9 +66,9 @@ function init(){
 			// end game and refresh page 
 			['userName', 'chips', 'funds'].forEach(v => localStorage.removeItem('BlackJackJs-' + v));
 			stage.removeAllChildren();
-			var gameOverText = new createjs.Text('Game Over', '50px Arial', '#fff');
+			var gameOverText = new createjs.Text('Juego Terminado', '50px Arial', '#fff');
 			gameOverText.center(1, 1);
-			var replayText = new createjs.Text('Replay', '30px Arial', '#fff');
+			var replayText = new createjs.Text('Juega de Nuevo', '30px Arial', '#fff');
 			replayText.center(1);
 			replayText.y = 400;
 			var hit = new createjs.Shape();
@@ -126,12 +126,11 @@ function init(){
 				titleText.center(1, 1);
 				var nameInput = new TextInput();
 				// autofocus
-				
+				nameInput._focused = true;
 				nameInput._hiddenInput.style.display = 'block';
 				nameInput._hiddenInput.style.left = (nameInput.x + stage.canvas.offsetLeft + nameInput._padding) + 'px';
 				nameInput._hiddenInput.style.top = (nameInput.y + stage.canvas.offsetTop + nameInput._padding) + 'px';
 				nameInput._hiddenInput.focus();
-				nameInput._focused = true;
 				nameInput.x = 430;
 				nameInput.y = 400;
 				nameInput._visiblePostCursorText.text = 'Tu nombre';
@@ -442,7 +441,7 @@ function init(){
 
 		deck: [],
 		name: {
-			value: 'Player 1',
+			value: 'Player',
 			text: false,
 		},
 		cardsContainer: false,
