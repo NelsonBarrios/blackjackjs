@@ -145,7 +145,6 @@ class TextInput extends createjs.Container {
     });
     this._hiddenInput.addEventListener('input', (e) => {
       if (this._focused) {
-        e.preventDefault();
         this._preCursorText = this._hiddenInput.value;
         this.update();
         this._cursor.x = this._visiblePreCursorText.getMeasuredWidth();

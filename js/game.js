@@ -5,6 +5,7 @@ function init(){
 	var game = {
 
 		deck: [],
+		// Api here
 		chipsValue: {
 			blue: 500,
 			black: 100,
@@ -62,6 +63,7 @@ function init(){
 		},
 
 		over: function(){
+			// end game and refresh page 
 			['userName', 'chips', 'funds'].forEach(v => localStorage.removeItem('BlackJackJs-' + v));
 			stage.removeAllChildren();
 			var gameOverText = new createjs.Text('Game Over', '50px Arial', '#fff');
@@ -82,7 +84,8 @@ function init(){
 			stage.addChild(gameOverText, replayText);
 		},
 
-		balanceChips: function(value){
+		balanceChips: function(value){//chip for bet.
+				//here, chip in game start.
 			var chips = {
 				blue: 0,
 				black: 0,
@@ -90,7 +93,7 @@ function init(){
 				red: 0,
 				white: 0
 			};
-
+			// Hit variable chipsValue of general scoop variable and sum whitin balanceChips(initial variable)
 			while(value !== 0){
 				Object.keys(chips).reverse().forEach(function(chip){
 					if(value >= game.chipsValue[chip]){
@@ -119,18 +122,19 @@ function init(){
 			}
 			else{
 				this.startContainer = new createjs.Container();
-				var titleText = new createjs.Text('BlackJackJs', '60px Arial', '#fff');
+				var titleText = new createjs.Text('Blackjack', '60px Arial', '#fff');
 				titleText.center(1, 1);
 				var nameInput = new TextInput();
 				// autofocus
-				nameInput._focused = true;
+				
 				nameInput._hiddenInput.style.display = 'block';
 				nameInput._hiddenInput.style.left = (nameInput.x + stage.canvas.offsetLeft + nameInput._padding) + 'px';
 				nameInput._hiddenInput.style.top = (nameInput.y + stage.canvas.offsetTop + nameInput._padding) + 'px';
 				nameInput._hiddenInput.focus();
+				nameInput._focused = true;
 				nameInput.x = 430;
 				nameInput.y = 400;
-				nameInput._visiblePostCursorText.text = 'Your name';
+				nameInput._visiblePostCursorText.text = 'Tu nombre';
 
 				var submitText = new createjs.Text('OK', '30px Arial', '#fff');
 				submitText.x = 640;
@@ -141,7 +145,7 @@ function init(){
 				submitText.hitArea = hit;
 				// Start input
 				submitText.addEventListener('click', function(event){
-					player.name.value = nameInput._visiblePreCursorText.text || 'Player 1';
+					player.name.value = nameInput._visiblePreCursorText.text || 'Tú';
 					localStorage.setItem('BlackJackJs-userName', player.name.value);
 					localStorage.setItem('BlackJackJs-funds', '1000');
 					localStorage.setItem('BlackJackJs-chips', JSON.stringify(player.chips));
