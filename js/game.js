@@ -124,7 +124,6 @@ function init(){
 				this.startContainer = new createjs.Container();
 				var titleText = new createjs.Text('Blackjack', '60px Arial', '#fff');
 				titleText.center(1, 1);
-				var nameInput = new TextInput();
 				// autofocus
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
