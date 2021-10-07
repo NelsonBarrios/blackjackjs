@@ -298,9 +298,9 @@ function init(){
 			}
 
 		},
-		addCount: function () {
-			console.log(deckValue(card,owner));
-			var count = new createjs.Text(this.deckValue.deck, '30px Arial', '#fff');
+		addCount: function (card, owner) {
+			console.log(this.deckValue(card,owner));
+			var count = new createjs.Text(this.deckValue(owner), '30px Arial', '#fff');
 			count.center();
 			count.y = 600;
 			stage.addChild(count);
