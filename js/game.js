@@ -255,8 +255,8 @@ function init(){
 			this.deck.splice(index, 1);
 			this.displayCard(card, to);
 		},
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
+		addCount: function (card) {
+			var count = new createjs.Text(card, '30px Arial', '#fff');
 			count.center();
 			count.y = 300;
 			stage.addChild(count);
