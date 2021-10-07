@@ -242,10 +242,10 @@ function init(){
 					total += 11;
 			});
 
-			return console.log(total); //mostrar total contado
+			return total; //mostrar total contado
 		},
 
-		distributeCard: function(to, hidden = false){//distribute of cards and deleting it
+		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
 			var index = rand(0, this.deck.length - 1);
 			var card = this.deck[index];
 			if(hidden) card.hidden = true;
@@ -275,10 +275,7 @@ function init(){
 
 			createjs.Sound.play('card');
 			var card = new createjs.Bitmap(card.hidden ? imgs.cards.path + imgs.cards.back.red + '.' + imgs.cards.ext : imgs.cards.get(card.suit, card.value));
-			var addCount = new createjs.Text(player.deck, '30px Arial', '#fff');
-			addCount.center();
-			addCount.y = 600;
-			stage.addChild(addCount);
+			
 			// here graphic total cards " bank.deck/player.deck "
 
 			if(owner === 'bank'){
@@ -300,6 +297,12 @@ function init(){
 					player.lose();
 			}
 
+		},
+		addCount: function () {
+			var count = new createjs.Text(deckValue(player.deck.card), '30px Arial', '#fff');
+			count.center();
+			count.y = 600;
+			stage.addChild(count);
 		},
 
 		addButtons: function(){
