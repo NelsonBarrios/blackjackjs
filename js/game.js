@@ -136,7 +136,7 @@ function init(){
 				nameInput._visiblePostCursorText.text = 'Tu nombre';
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
-				submitText.x = 640;
+				submitText.x = 430;
 				submitText.y = 403;
 				submitText.cursor = 'Pointer';
 				var hit = new createjs.Shape();
