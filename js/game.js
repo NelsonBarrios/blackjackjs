@@ -299,7 +299,6 @@ function init(){
 
 		},
 		addCount: function () {
-			console.log(this.player);
 			console.log(deckValue(card,owner));
 			var count = new createjs.Text(this.deckValue.deck, '30px Arial', '#fff');
 			count.center();
