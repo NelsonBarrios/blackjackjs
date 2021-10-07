@@ -169,7 +169,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
-			this.addCount();
+			//this.addCount();
 		},
 
 		go: function(){
@@ -241,7 +241,10 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-
+			var count = new createjs.Text(total, '30px Arial', '#fff');
+			count.center();
+			count.y = 600;
+			stage.addChild(count);
 			return total; //mostrar total contado
 		},
 
@@ -299,8 +302,7 @@ function init(){
 
 		},
 		addCount: function (card, owner) {
-			console.log(this.deckValue(card,owner));
-			var count = new createjs.Text("22", '30px Arial', '#fff');
+			var count = new createjs.Text(card, '30px Arial', '#fff');
 			count.center();
 			count.y = 600;
 			stage.addChild(count);
