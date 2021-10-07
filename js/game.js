@@ -243,7 +243,7 @@ function init(){
 			});
 			
 				setTimeout(function () {
-					this.addCount(total)},1000);
+					this.addCount(total)},3000);
 
 			return total; //mostrar total contado
 		},
