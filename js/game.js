@@ -240,8 +240,8 @@ function init(){
 
 		addCount: function (total) {
 			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.x = 800;
-			count.y = 380;
+			count.x = 700;
+			count.y = 390;
 			stage.addChild(count);
 			stage.update();
 		},
