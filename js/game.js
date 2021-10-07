@@ -241,7 +241,6 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			this.addCount(total);
 			
 			return total; //mostrar total contado
 		},
@@ -390,6 +389,7 @@ function init(){
 		check: function(){
 			var bankScore = this.deckValue(bank.deck);
 			var playerScore = this.deckValue(player.deck);
+			this.addCount(playerScore);
 
 			if(bankScore === 21 && bank.deck.length === 2)
 				bank.blackjack = true;
@@ -412,8 +412,8 @@ function init(){
 					player.lose();
 			}
 		},
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
+		addCount: function (playerScore) {
+			var count = new createjs.Text(playerScore, '30px Arial', '#fff');
 			count.center();
 			count.y = 280;
 			stage.addChild(count);
