@@ -124,6 +124,7 @@ function init(){
 				this.startContainer = new createjs.Container();
 				var titleText = new createjs.Text('Blackjack', '60px Arial', '#fff');
 				titleText.center(1, 1);
+				var nameInput = new TextInput();
 				// autofocus
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
@@ -293,7 +294,7 @@ function init(){
 			else if(owner === 'player'){
 				card.x = 100;
 				card.y = -400;
-				this.addCount(card) 
+				this.addCount(total) 
 				player.cardsContainer.addChild(card);
 				createjs.Tween.get(card)
 					.to({x: 50 * player.deck.length, y: 100}, 750, createjs.Ease.getPowInOut(1));
