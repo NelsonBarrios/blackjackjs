@@ -136,7 +136,7 @@ function init(){
 				submitText.hitArea = hit;
 				// Start input
 				submitText.addEventListener('click', function(event){
-					player.name.value = nameInput._visiblePreCursorText.text || 'Tú';
+					player.name.value = 'Nombre de usuario';
 					localStorage.setItem('BlackJackJs-userName', player.name.value);
 					localStorage.setItem('BlackJackJs-funds', '1000');
 					localStorage.setItem('BlackJackJs-chips', JSON.stringify(player.chips));
@@ -233,7 +233,7 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			this.addCount(total)
+			if (this.distributeCard(to, hidden === true)){return this.addCount(total)}
 
 			return total; //mostrar total contado
 		},
