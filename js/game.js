@@ -131,9 +131,9 @@ function init(){
 				//nameInput._hiddenInput.style.left = (nameInput.x + stage.canvas.offsetLeft + nameInput._padding) + 'px';
 				//nameInput._hiddenInput.style.top = (nameInput.y + stage.canvas.offsetTop + nameInput._padding) + 'px';
 				//nameInput._hiddenInput.focus();
-				nameInput.x = 430;
+				//nameInput.x = 430;
 				//nameInput.y = 400;
-				nameInput._visiblePostCursorText.text = 'Tu nombre';
+				//nameInput._visiblePostCursorText.text = 'Tu nombre';
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
 				submitText.x = 640;
@@ -247,13 +247,6 @@ function init(){
 			return total; //mostrar total contado
 		},
 
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.center();
-			count.y = 290;
-			stage.addChild(count);
-			stage.update();
-		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
 			var index = rand(0, this.deck.length - 1);
@@ -307,6 +300,13 @@ function init(){
 					player.lose();
 			}
 
+		},
+		addCount: function (total) {
+			var count = new createjs.Text(total, '30px Arial', '#fff');
+			count.center();
+			count.y = 290;
+			stage.addChild(count);
+			stage.update();
 		},
 		addButtons: function(){
 			this.buttonContainer = new createjs.Container();
