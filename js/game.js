@@ -243,7 +243,7 @@ function init(){
 			});
 			var count = new createjs.Text(total, '30px Arial', '#fff');
 			count.center();
-			count.y = 600;
+			count.y = 500;
 			stage.addChild(count);
 			return count; //mostrar total contado
 		},
