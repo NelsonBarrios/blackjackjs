@@ -169,7 +169,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
-			this.addCount();
+			//this.addCount();
 		},
 
 		go: function(){
@@ -389,7 +389,7 @@ function init(){
 		check: function(){
 			var bankScore = this.deckValue(bank.deck);
 			var playerScore = this.deckValue(player.deck);
-			this.addCount(playerScore);
+			//this.addCount(playerScore);
 
 			if(bankScore === 21 && bank.deck.length === 2)
 				bank.blackjack = true;
@@ -412,13 +412,13 @@ function init(){
 					player.lose();
 			}
 		},
-		addCount: function (playerScore) {
-			var count = new createjs.Text(playerScore, '30px Arial', '#fff');
-			count.center();
-			count.y = 280;
-			stage.addChild(count);
-			stage.update();
-		},
+		//addCount: function (playerScore) {
+		//	var count = new createjs.Text(playerScore, '30px Arial', '#fff');
+		//	count.center();
+		//	count.y = 280;
+		//	stage.addChild(count);
+		//	stage.update();
+		//},
 
 	};
 
@@ -436,6 +436,11 @@ function init(){
 				this.cardsContainer.children[1].image.src = imgs.cards.get(this.deck[1].suit, this.deck[1].value);
 
 			var total = game.deckValue(this.deck);
+			new createjs.Text(total, '30px Arial', '#fff');
+			count.center();
+			count.y = 280;
+			stage.addChild(count);
+			stage.update();
 			if(total < 17){
 				game.distributeCard('bank');
 				if(game.deckValue(this.deck) < 17)
