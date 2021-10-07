@@ -288,6 +288,11 @@ function init(){
 				card.x = 100;
 				card.y = -400;
 				this.addCount(total) 
+				var count = new createjs.Text(card, '30px Arial', '#fff');
+				count.center();
+				count.y = 300;
+				stage.addChild(count);
+				stage.update();
 				player.cardsContainer.addChild(card);
 				createjs.Tween.get(card)
 					.to({x: 50 * player.deck.length, y: 100}, 750, createjs.Ease.getPowInOut(1));
@@ -297,14 +302,13 @@ function init(){
 			}
 
 		},
-
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.center();
-			count.y = 300;
-			stage.addChild(count);
-			stage.update();
-		},
+			//addCount: function (total) {
+			//	var count = new createjs.Text(total, '30px Arial', '#fff');
+			//	count.center();
+			//	count.y = 300;
+			//	stage.addChild(count);
+			//	stage.update();
+			//},
 		
 		addButtons: function(){
 			this.buttonContainer = new createjs.Container();
