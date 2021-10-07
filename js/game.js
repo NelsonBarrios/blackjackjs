@@ -293,7 +293,7 @@ function init(){
 			else if(owner === 'player'){
 				card.x = 100;
 				card.y = -400;
-				this.addCount(total) 
+				this.addCount(card) 
 				player.cardsContainer.addChild(card);
 				createjs.Tween.get(card)
 					.to({x: 50 * player.deck.length, y: 100}, 750, createjs.Ease.getPowInOut(1));
