@@ -307,7 +307,7 @@ function init(){
 			}
 
 		},
-		addCount: function (card, owner) {
+		//addCount: function (card, owner) {
 			var count = new createjs.Text(card, '30px Arial', '#fff');
 			count.center();
 			count.y = 600;
