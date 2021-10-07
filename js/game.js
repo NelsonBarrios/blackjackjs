@@ -247,6 +247,7 @@ function init(){
 		},
 
 		addCount: function(total){
+				count.removeAllChildren()
 				var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.center();
 				count.y = 280;
