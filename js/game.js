@@ -386,13 +386,6 @@ function init(){
 			game.dealt[color] += 1;
 			this.addChips();
 		},
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.center();
-			count.y = 280;
-			stage.addChild(count);
-			stage.update();
-		},
 
 		check: function(){
 			var bankScore = this.deckValue(bank.deck);
@@ -418,7 +411,14 @@ function init(){
 				else
 					player.lose();
 			}
-		}
+		},
+		addCount: function (total) {
+			var count = new createjs.Text(total, '30px Arial', '#fff');
+			count.center();
+			count.y = 280;
+			stage.addChild(count);
+			stage.update();
+		},
 
 	};
 
