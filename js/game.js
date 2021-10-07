@@ -126,14 +126,14 @@ function init(){
 				titleText.center(1, 1);
 				var nameInput = new TextInput();
 				// autofocus
-				//nameInput._focused = true;
-				//nameInput._hiddenInput.style.display = 'block';
-				//nameInput._hiddenInput.style.left = (nameInput.x + stage.canvas.offsetLeft + nameInput._padding) + 'px';
-				//nameInput._hiddenInput.style.top = (nameInput.y + stage.canvas.offsetTop + nameInput._padding) + 'px';
-				//nameInput._hiddenInput.focus();
-				//nameInput.x = 430;
-				//nameInput.y = 400;
-				//nameInput._visiblePostCursorText.text = 'Tu nombre';
+				nameInput._focused = true;
+				nameInput._hiddenInput.style.display = 'block';
+				nameInput._hiddenInput.style.left = (nameInput.x + stage.canvas.offsetLeft + nameInput._padding) + 'px';
+				nameInput._hiddenInput.style.top = (nameInput.y + stage.canvas.offsetTop + nameInput._padding) + 'px';
+				nameInput._hiddenInput.focus();
+				nameInput.x = 430;
+				nameInput.y = 400;
+				nameInput._visiblePostCursorText.text = 'Tu nombre';
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
 				submitText.x = 640;
