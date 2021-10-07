@@ -124,7 +124,7 @@ function init(){
 				this.startContainer = new createjs.Container();
 				var titleText = new createjs.Text('Blackjack', '60px Arial', '#fff');
 				titleText.center(1, 1);
-				//var nameInput = new TextInput();
+				var nameInput = new TextInput();
 				// autofocus
 				//nameInput._focused = true;
 				//nameInput._hiddenInput.style.display = 'block';
@@ -245,6 +245,23 @@ function init(){
 			this.addCount(total);
 
 			return total; //mostrar total contado
+		},
+		addCount: function (total) {
+			if (game.distributeCard('bank', true)){
+			var count = new createjs.Text(total, '30px Arial', '#fff');
+			count.center();
+			count.y = 290;
+			stage.addChild(count);
+			stage.update();
+			}else{
+				setTimeout(function () {
+					var count = new createjs.Text(total, '30px Arial', '#fff');
+					count.center();
+					count.y = 290;
+					stage.addChild(count);
+					stage.update();
+				}, 1000);
+			}
 		},
 
 
@@ -389,14 +406,7 @@ function init(){
 			game.dealt[color] += 1;
 			this.addChips();
 		},
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.center();
-			count.y = 290;
-			stage.addChild(count);
-			stage.update();
-		},
-
+		
 		check: function(){
 			var bankScore = this.deckValue(bank.deck);
 			var playerScore = this.deckValue(player.deck);
