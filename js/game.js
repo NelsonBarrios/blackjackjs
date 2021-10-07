@@ -245,7 +245,7 @@ function init(){
 			count.center();
 			count.y = 600;
 			stage.addChild(count);
-			return total; //mostrar total contado
+			return count; //mostrar total contado
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
