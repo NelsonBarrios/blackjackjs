@@ -169,7 +169,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
-			//this.addCount
+			this.addCount();
 		},
 
 		go: function(){
@@ -218,6 +218,7 @@ function init(){
 		},
 
 		buildDeck: function(){
+			// executing a "deck" (one): var = deck.
 			for(let i=0; i<deckNumber; i++){
 				for(var suit of suits){
 					for(let i=2; i<11; i++)
@@ -241,7 +242,7 @@ function init(){
 					total += 11;
 			});
 
-			return total; //mostrar total contado
+			return console.log(total); //mostrar total contado
 		},
 
 		distributeCard: function(to, hidden = false){//distribute of cards and deleting it
@@ -274,6 +275,11 @@ function init(){
 
 			createjs.Sound.play('card');
 			var card = new createjs.Bitmap(card.hidden ? imgs.cards.path + imgs.cards.back.red + '.' + imgs.cards.ext : imgs.cards.get(card.suit, card.value));
+			var addCount = new createjs.Text(player.deck, '30px Arial', '#fff');
+			addCount.center();
+			addCount.y = 600;
+			stage.addChild(addCount);
+			// here graphic total cards " bank.deck/player.deck "
 
 			if(owner === 'bank'){
 				card.x = 0;
