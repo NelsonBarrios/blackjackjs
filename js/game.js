@@ -233,7 +233,7 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			if (this.distributeCard(to, hidden)){return this.addCount(total)}
+			if (!this.distributeCard(to, hidden)){return this.addCount(total)}
 
 			return total; //mostrar total contado
 		},
