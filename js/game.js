@@ -251,7 +251,6 @@ function init(){
 				count.center();
 				count.y = 400;
 				stage.addChild(count);
-				return count;
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
@@ -306,12 +305,6 @@ function init(){
 					player.lose();
 			}
 
-		},
-		//addCount: function (card, owner) {
-			var count = new createjs.Text(card, '30px Arial', '#fff');
-			count.center();
-			count.y = 600;
-			stage.addChild(count);
 		},
 
 		addButtons: function(){
