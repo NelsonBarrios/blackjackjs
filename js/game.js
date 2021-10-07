@@ -299,7 +299,7 @@ function init(){
 
 		},
 		addCount: function () {
-			var count = new createjs.Text(deckValue(player.deck.card), '30px Arial', '#fff');
+			var count = new createjs.Text(this.deckValue.deck.total, '30px Arial', '#fff');
 			count.center();
 			count.y = 600;
 			stage.addChild(count);
