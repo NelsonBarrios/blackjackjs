@@ -245,6 +245,13 @@ function init(){
 			
 			return total; //mostrar total contado
 		},
+		addCount: function (total) {
+			var count = new createjs.Text(total, '30px Arial', '#fff');
+			count.center();
+			count.y = 280;
+			stage.addChild(count);
+			stage.update();
+		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
 			var index = rand(0, this.deck.length - 1);
@@ -299,13 +306,7 @@ function init(){
 			}
 
 		},
-		addCount: function (total) {
-			var count = new createjs.Text(playerScore, '30px Arial', '#fff');
-			count.center();
-			count.y = 280;
-			stage.addChild(count);
-			stage.update();
-		},
+		
 
 
 		addButtons: function(){
