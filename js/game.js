@@ -5,7 +5,6 @@ function init(){
 	var game = {
 
 		deck: [],
-		cardSuit,
 		// Api here
 		chipsValue: {
 			blue: 500,
@@ -242,17 +241,17 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			this.cardSuit = total;
+			this.addCount(total);
 			
 			return total; //mostrar total contado
 		},
 
-		addCount: function(){
-				var count = new createjs.Text(this.cardSuit, '30px Arial', '#fff');
+		addCount: function(total){
+				var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.center();
 				count.y = 400;
 				stage.addChild(count);
-				console.log(this.cardSuit);
+				return count;
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
