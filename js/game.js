@@ -247,13 +247,6 @@ function init(){
 			return total; //mostrar total contado
 		},
 		addCount: function (total) {
-			if (game.distributeCard('bank', true)){
-			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.center();
-			count.y = 290;
-			stage.addChild(count);
-			stage.update();
-			}else{
 				setTimeout(function () {
 					var count = new createjs.Text(total, '30px Arial', '#fff');
 					count.center();
@@ -261,7 +254,6 @@ function init(){
 					stage.addChild(count);
 					stage.update();
 				}, 1000);
-			}
 		},
 
 
