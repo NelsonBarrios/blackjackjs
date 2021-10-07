@@ -241,19 +241,18 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-
-			this.addCount(total);
+			
+				setTimeout(function () {
+					this.addCount(total)},1000);
 
 			return total; //mostrar total contado
 		},
 		addCount: function (total) {
-				setTimeout(function () {
-					var count = new createjs.Text(total, '30px Arial', '#fff');
-					count.center();
-					count.y = 290;
-					stage.addChild(count);
-					stage.update();
-				}, 1000);
+			var count = new createjs.Text(total, '30px Arial', '#fff');
+			count.center();
+			count.y = 290;
+			stage.addChild(count);
+			stage.update();
 		},
 
 
