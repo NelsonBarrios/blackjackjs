@@ -169,7 +169,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
-			//this.addCount();
+			this.addCount();
 		},
 
 		go: function(){
@@ -249,8 +249,9 @@ function init(){
 		addCount: function(total){
 				var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.center();
-				count.y = 400;
+				count.y = 300;
 				stage.addChild(count);
+				stage.update();
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
