@@ -128,7 +128,7 @@ function init(){
 				// autofocus
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
-				submitText.x = 430;
+				submitText.x = 450;
 				submitText.y = 403;
 				submitText.cursor = 'Pointer';
 				var hit = new createjs.Shape();
@@ -240,7 +240,7 @@ function init(){
 		addCount: function (total) {
 			var count = new createjs.Text(total, '30px Arial', '#fff');
 			count.center();
-			count.y = 290;
+			count.y = 300;
 			stage.addChild(count);
 			stage.update();
 		},
