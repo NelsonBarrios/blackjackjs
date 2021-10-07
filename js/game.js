@@ -243,9 +243,9 @@ function init(){
 			});
 			var count = new createjs.Text(total, '30px Arial', '#fff');
 			count.center();
-			count.y = 200;
+			count.y = 300;
 			stage.addChild(count);
-			return total, count; //mostrar total contado
+			return total&& count; //mostrar total contado
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
