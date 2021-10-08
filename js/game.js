@@ -238,13 +238,13 @@ function init(){
 			return total; //mostrar total contado
 		},
 
-		// addCount: function (total) {
-		// 	var count = new createjs.Text(total, '30px Arial', '#fff');
-		// 	count.x = 650;
-		// 	count.y = 410;
-		// 	stage.addChild(count);
-		// 	stage.update();
-		// },
+		addCount: function (total) {
+		var count = new createjs.Text(total, '30px Arial', '#fff');
+		count.x = 650;
+		count.y = 410;
+		stage.addChild(count);
+		stage.update();
+		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
 			var index = rand(0, this.deck.length - 1);
@@ -431,11 +431,7 @@ function init(){
 				this.cardsContainer.children[1].image.src = imgs.cards.get(this.deck[1].suit, this.deck[1].value);
 
 			var total = game.deckValue(this.deck);
-			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.x = 650;
-			count.y = 410;
-			stage.addChild(count);
-			stage.update();
+			game.addCount();
 			if(total < 17){
 				game.distributeCard('bank');
 				if(game.deckValue(this.deck) < 17)
