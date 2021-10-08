@@ -233,17 +233,21 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			//this.addCount(total)
+			if(game.deckValue){
+				game.addCount(total)
+			};
 
 			return total; //mostrar total contado
 		},
 
 		addCount: function (total) {
-		var count = new createjs.Text(total, '30px Arial', '#fff');
-		count.x = 650;
-		count.y = 410;
-		stage.addChild(count);
-		stage.update();
+			if(game.deckValue){
+				var count = new createjs.Text(total, '30px Arial', '#fff');
+				count.x = 650;
+				count.y = 410;
+				stage.addChild(count);
+				stage.update();
+			}
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
@@ -431,7 +435,7 @@ function init(){
 				this.cardsContainer.children[1].image.src = imgs.cards.get(this.deck[1].suit, this.deck[1].value);
 
 			var total = game.deckValue(this.deck);
-			game.addCount();
+			game.addCount(this.deck);
 			if(total < 17){
 				game.distributeCard('bank');
 				if(game.deckValue(this.deck) < 17)
