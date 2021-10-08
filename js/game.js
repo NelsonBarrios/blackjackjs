@@ -234,7 +234,10 @@ function init(){
 					total += 11;
 			});
 			if(game.deckValue){
-				game.addCount(total)
+				for (let i = 0; i < 2; i++) {
+					game.addCount(total[i])
+				}
+				
 			};
 
 			return total; //mostrar total contado
