@@ -272,7 +272,7 @@ function init(){
 		
 
 		displayCard: function(card, owner){
-			var cardCurrent = null;
+			var cardCurrent = undefined;
 			function fcard(){
 				return cardCurrent.push(card.value);
 				};
