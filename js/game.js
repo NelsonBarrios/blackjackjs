@@ -232,6 +232,7 @@ function init(){
 					total += 10;
 				if(card.value === 'A')
 					total += 11;
+					console.log(deck);
 					console.log(card);
 			});
 			if(game.deckValue){
