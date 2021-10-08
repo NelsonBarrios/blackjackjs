@@ -232,16 +232,13 @@ function init(){
 					total += 10;
 				if(card.value === 'A')
 					total += 11;
-					console.log(deck);
-					console.log(deck[card]);
-					console.log(total);
+					console.log(card);
 			});
 			if(game.deckValue){
 				for (let i = 0; i < 2; i++) {
 					console.log(deck[i]);
 					game.addCount(deck[i]);
 				};
-				
 			};
 			console.log(total)
 			return total; //mostrar total contado
