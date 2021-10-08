@@ -246,7 +246,6 @@ function init(){
 		// 	stage.update();
 		// },
 
-
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
 			var index = rand(0, this.deck.length - 1);
 			var card = this.deck[index];
