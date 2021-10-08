@@ -235,11 +235,6 @@ function init(){
 					console.log(deck);
 					console.log(card);
 			});
-			if(game.deckValue){
-				for (let i = 0; i < 2; i++) {
-					console.log(deck[i].value);
-				};
-			};
 			console.log(total);
 			var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.x = 650;
