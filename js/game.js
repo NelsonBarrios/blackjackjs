@@ -277,6 +277,7 @@ function init(){
 				return cardCurrent.push(card.value);
 				};
 			console.log(card.value);
+			console.log(cardCurrent);
 			if(!bank.cardsContainer){
 				bank.cardsContainer = new createjs.Container(); // bank.cardContainer.x = 450
 				bank.cardsContainer.y = -100;
@@ -284,7 +285,6 @@ function init(){
 				bank.cardsContainer.x = 450;
 			}
 			if(!player.cardsContainer){
-				console.log(cardsContainer)
 				player.cardsContainer = new createjs.Container(); // player.cardContainer.x = 450
 				player.cardsContainer.y = 300;
 				stage.addChild(player.cardsContainer);
