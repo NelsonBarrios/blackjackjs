@@ -247,7 +247,7 @@ function init(){
 
 		addCount: function (total) {
 			if(game.deckValue){
-				console.log("entree:1"+total)
+				console.log(total)
 				var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
@@ -285,6 +285,7 @@ function init(){
 				bank.cardsContainer.x = 450;
 			}
 			if(!player.cardsContainer){
+				console.log(cardsContainer)
 				player.cardsContainer = new createjs.Container(); // player.cardContainer.x = 450
 				player.cardsContainer.y = 300;
 				stage.addChild(player.cardsContainer);
@@ -449,7 +450,7 @@ function init(){
 
 			var total = game.deckValue(this.deck);
 			for (let i = 0; i < this.deck.length -1; i++) {
-				console.log("entree: 2"+ player.deck[i])
+				console.log(player.deck[i])
 				game.addCount(player.deck[i]);
 			}
 			
