@@ -276,7 +276,7 @@ function init(){
 			function fcard(){
 				return cardCurrent.push(card);
 				};
-			console.log(cardCurrent)
+			console.log(card);
 			if(!bank.cardsContainer){
 				bank.cardsContainer = new createjs.Container(); // bank.cardContainer.x = 450
 				bank.cardsContainer.y = -100;
