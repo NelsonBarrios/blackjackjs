@@ -241,7 +241,7 @@ function init(){
 					game.addCount(deck[i]);
 				};
 			};
-			console.log(total)
+			console.log(total);
 			return total; //mostrar total contado
 		},
 
