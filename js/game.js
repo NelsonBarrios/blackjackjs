@@ -272,6 +272,8 @@ function init(){
 		
 
 		displayCard: function(card, owner){
+			var cardCurrent = cardCurrent.push(card.value);
+			console.log("soy el push"+cardCurrent)
 			if(!bank.cardsContainer){
 				bank.cardsContainer = new createjs.Container(); // bank.cardContainer.x = 450
 				bank.cardsContainer.y = -100;
@@ -305,6 +307,7 @@ function init(){
 				createjs.Tween.get(card)
 					.to({x: 50 * player.deck.length, y: 100}, 750, createjs.Ease.getPowInOut(1));
 				player.cardsContainer.x -= 20;
+
 				if(this.deckValue(player.deck) > 21)
 					player.lose();
 			}
