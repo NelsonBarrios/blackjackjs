@@ -232,11 +232,15 @@ function init(){
 					total += 10;
 				if(card.value === 'A')
 					total += 11;
+					console.log(deck);
+					console.log(deck.card);
+					console.log(total);
 			});
 			if(game.deckValue){
 				for (let i = 0; i < 2; i++) {
-					game.addCount(total[i])
-				}
+					console.log(deck[i]);
+					game.addCount(deck[i]);
+				};
 				
 			};
 
@@ -245,6 +249,7 @@ function init(){
 
 		addCount: function (total) {
 			if(game.deckValue){
+				console.log("entree:1")
 				var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
@@ -439,7 +444,8 @@ function init(){
 
 			var total = game.deckValue(this.deck);
 			for (let i = 0; i < this.deck.length -1; i++) {
-				game.addCount(this.deck[i]);
+				console.log("entree: 2"+ player.deck[i])
+				game.addCount(player.deck[i]);
 			}
 			
 			if(total < 17){
