@@ -274,7 +274,7 @@ function init(){
 		displayCard: function(card, owner){
 			var cardCurrent = [];
 			function fcard(){
-				return cardCurrent.push(card.value);
+				return cardCurrent.push(card);
 				};
 			console.log(cardCurrent)
 			if(!bank.cardsContainer){
