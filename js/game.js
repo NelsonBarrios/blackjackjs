@@ -435,7 +435,10 @@ function init(){
 				this.cardsContainer.children[1].image.src = imgs.cards.get(this.deck[1].suit, this.deck[1].value);
 
 			var total = game.deckValue(this.deck);
-			game.addCount(this.deck);
+			for (let i = 0; i < this.deck.length -1; i++) {
+				game.addCount(this.deck[i]);
+			}
+			
 			if(total < 17){
 				game.distributeCard('bank');
 				if(game.deckValue(this.deck) < 17)
