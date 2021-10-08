@@ -237,8 +237,7 @@ function init(){
 			});
 			if(game.deckValue){
 				for (let i = 0; i < 2; i++) {
-					console.log(deck[i]);
-					game.addCount(deck[i]);
+					console.log(deck[i].value);
 				};
 			};
 			console.log(total);
