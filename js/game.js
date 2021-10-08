@@ -7,6 +7,7 @@ function init(){
 		deck: [],
 		// Api here
 		chipsValue: {
+			//chip cambiar imagen acelerar el juega
 			blue: 500,
 			black: 100,
 			green: 25,
@@ -124,7 +125,6 @@ function init(){
 				this.startContainer = new createjs.Container();
 				var titleText = new createjs.Text('Blackjack', '60px Arial', '#fff');
 				titleText.center(1, 1);
-				var nameInput = new TextInput();
 				// autofocus
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
@@ -144,7 +144,7 @@ function init(){
 					myAudio.paused ? myAudio.play() : myAudio.pause();
 					game.start();
 				});
-				this.startContainer.addChild(titleText, nameInput, submitText);
+				this.startContainer.addChild(titleText, submitText);
 				stage.addChild(this.startContainer);
 			}
 		},
@@ -233,18 +233,18 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			this.addCount(total)
+			//this.addCount(total)
 
 			return total; //mostrar total contado
 		},
 
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
-			count.x = 670;
-			count.y = 410;
-			stage.addChild(count);
-			stage.update();
-		},
+		// addCount: function (total) {
+		// 	var count = new createjs.Text(total, '30px Arial', '#fff');
+		// 	count.x = 650;
+		// 	count.y = 410;
+		// 	stage.addChild(count);
+		// 	stage.update();
+		// },
 
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
@@ -432,6 +432,11 @@ function init(){
 				this.cardsContainer.children[1].image.src = imgs.cards.get(this.deck[1].suit, this.deck[1].value);
 
 			var total = game.deckValue(this.deck);
+			var count = new createjs.Text(total, '30px Arial', '#fff');
+			count.x = 650;
+			count.y = 410;
+			stage.addChild(count);
+			stage.update();
 			if(total < 17){
 				game.distributeCard('bank');
 				if(game.deckValue(this.deck) < 17)
