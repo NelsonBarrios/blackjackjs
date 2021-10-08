@@ -272,7 +272,10 @@ function init(){
 		
 
 		displayCard: function(card, owner){
-			var cardCurrent = {} = cardCurrent.push(card.value);
+			var cardCurrent = [];
+			function fcard(){
+				return cardCurrent.push(card.value);
+				};
 			console.log(cardCurrent)
 			if(!bank.cardsContainer){
 				bank.cardsContainer = new createjs.Container(); // bank.cardContainer.x = 450
