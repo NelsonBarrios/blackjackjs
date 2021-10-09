@@ -211,7 +211,7 @@ function init(){
 					}, 750);
 				}, 750);
 			}, 750);
-			game.addCount(0);
+			game.addCount(undefined);
 		},
 
 		buildDeck: function(){
