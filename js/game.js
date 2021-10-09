@@ -211,6 +211,7 @@ function init(){
 					}, 750);
 				}, 750);
 			}, 750);
+			game.count.removeAllChildren();
 		},
 
 		buildDeck: function(){
