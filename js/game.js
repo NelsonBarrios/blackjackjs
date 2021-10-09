@@ -244,7 +244,7 @@ function init(){
 
 		addCount: function (number) {
 			console.log("entre primero");
-			thisgame.count.removeAllChildren();
+			game.count.removeAllChildren();
 			game.count = new createjs.Text(number, '30px Arial', '#fff');
 				count.x = 700;
 				count.y = 410;
