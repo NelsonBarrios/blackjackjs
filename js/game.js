@@ -28,6 +28,7 @@ function init(){
 		buttonContainer: false,
 		dealtChipContainer: false,
 		inProgress: false,
+		total: 0,
 		dealt: {
 			blue: 0,
 			black: 0,
@@ -236,21 +237,19 @@ function init(){
 					console.log(card);
 			});
 			console.log(total);
+			total = game.total;
+			this.addCount(game.total)
+			return total; //mostrar total contado
 			
-			total; //mostrar total contado
+		},
+
+		addCount: function (total) {
 			var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
 				stage.addChild(count);
 				stage.update();
 		},
-
-		// addCount: function (total) {
-		// 	if(game.deckValue){
-		// 		console.log(total)
-				
-		// 	}
-		// },
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
 			var index = rand(0, this.deck.length - 1);
