@@ -200,6 +200,7 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
+			game.addCount(undefined);
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
@@ -211,7 +212,7 @@ function init(){
 					}, 750);
 				}, 750);
 			}, 750);
-			game.addCount(undefined);
+			
 		},
 
 		buildDeck: function(){
@@ -252,6 +253,7 @@ function init(){
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
+			game.addCount(undefined);
 			var index = rand(0, this.deck.length - 1);
 			var card = this.deck[index];
 			if(hidden) card.hidden = true;
