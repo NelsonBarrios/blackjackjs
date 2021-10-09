@@ -244,13 +244,14 @@ function init(){
 
 		addCount: function (number) {
 			console.log("entre primero");
-			game.count.removeAllChildren();
+			
 			game.count = new createjs.Text(number, '30px Arial', '#fff');
 				count.x = 700;
 				count.y = 410;
 			stage.addChild(game.count);
 			stage.update();
-			console.log("entre ultimo")
+			console.log("entre ultimo");
+			game.count.removeAllChildren();
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
