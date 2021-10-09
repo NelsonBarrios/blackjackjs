@@ -237,21 +237,18 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			this.totalC = total;
+			game.count = total;
 			return total; //mostrar total contado
 			
 		},
 
 		addCount: function (number) {
-			console.log("entre primero");
-			
 			game.count = new createjs.Text(number, '30px Arial', '#fff');
 				game.count.x = 700;
 				game.count.y = 410;
 			stage.addChild(game.count);
 			stage.update();
-			console.log("entre ultimo");
-			game.count.removeChildAt(game.count);
+			game.count.removeAllChildren();
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
