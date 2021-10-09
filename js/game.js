@@ -192,7 +192,6 @@ function init(){
 			game.resetChips();
 			game.addChips();
 			player.store();
-			game.addCount();
 			bank.cardsContainer.removeAllChildren();
 			player.cardsContainer.removeAllChildren();
 			this.message.text.text = messages.bet;
@@ -211,7 +210,8 @@ function init(){
 					}, 750);
 				}, 750);
 			}, 750);
-			game.count.removeAllChildren();
+			game.count.removeChildAt(game.count);
+
 		},
 
 		buildDeck: function(){
