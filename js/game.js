@@ -246,8 +246,8 @@ function init(){
 			console.log("entre primero");
 			
 			game.count = new createjs.Text(number, '30px Arial', '#fff');
-				count.x = 700;
-				count.y = 410;
+				game.count.x = 700;
+				game.count.y = 410;
 			stage.addChild(game.count);
 			stage.update();
 			console.log("entre ultimo");
