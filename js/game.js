@@ -237,7 +237,7 @@ function init(){
 					console.log(card);
 			});
 			console.log(total);
-			total = game.total;
+			game.total =+ total;
 			this.addCount(game.total)
 			return total; //mostrar total contado
 			
