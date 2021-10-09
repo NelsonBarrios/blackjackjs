@@ -200,6 +200,7 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
+			game.count.removeAllChildren();
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
@@ -248,7 +249,7 @@ function init(){
 				game.count.y = 410;
 			stage.addChild(game.count);
 			stage.update();
-			game.count.removeAllChildren();
+			
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
