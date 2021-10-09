@@ -171,7 +171,7 @@ function init(){
 				game.inProgress = true;
 				player.betted = true;
 				this.message.text.text = '';
-				this.addCount(0);
+				this.addCount().removeAllChildren();
 				this.new();
 			}
 			else if(!player.dealt)
@@ -201,7 +201,7 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
-			game.addCount(0);
+			game.addCount(null) = null;
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
