@@ -233,22 +233,21 @@ function init(){
 					total += 10;
 				if(card.value === 'A')
 					total += 11;
-					console.log(deck);
-					console.log(card);
 			});
 			console.log(total);
-			game.total =+ total;
-			this.addCount(game.total)
+			stage.addChild(total);
+				stage.update();
+				this.addCount(total)
 			return total; //mostrar total contado
 			
 		},
 
-		addCount: function (ejemplo) {
-			var count = new createjs.Text(ejemplo, '30px Arial', '#fff');
+		addCount: function (total) {
+			var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
-				stage.addChild(count);
-				stage.update();
+			stage.addChild(count);
+			stage.update();
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
