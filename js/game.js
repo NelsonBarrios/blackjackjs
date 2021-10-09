@@ -200,7 +200,7 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
-			game.addCount();
+			game.addCount(null);
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
@@ -245,7 +245,7 @@ function init(){
 
 		addCount: function (number) {
 			var count = new createjs.Text(number, '30px Arial', '#fff');
-				count.x = 650;
+				count.x = 700;
 				count.y = 410;
 			stage.addChild(count);
 			stage.update();
