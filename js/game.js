@@ -237,7 +237,7 @@ function init(){
 			console.log(total);
 			this.totalC = total;
 			console.log(this.totalC);
-			addCount(this.totalC);
+			this.addCount(this.totalC);
 			return total; //mostrar total contado
 			
 		},
