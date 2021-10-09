@@ -243,12 +243,14 @@ function init(){
 		},
 
 		addCount: function (number) {
+			console.log("entre primero");
 			count.removeAllChildren();
 			var count = new createjs.Text(number, '30px Arial', '#fff');
 				count.x = 700;
 				count.y = 410;
 			stage.addChild(count);
 			stage.update();
+			console.log("entre ultimo")
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
