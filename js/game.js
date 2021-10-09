@@ -163,7 +163,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
-			this.addCount(this.totalC);
+			this.addCount();
 		},
 
 		go: function(){
