@@ -244,7 +244,7 @@ function init(){
 		},
 
 		addCount: function (ejemplo) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
+			var count = new createjs.Text(ejemplo, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
 				stage.addChild(count);
