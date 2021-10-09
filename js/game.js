@@ -199,7 +199,7 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
-			game.count.removeChildAt(game.count);
+			
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
@@ -208,6 +208,7 @@ function init(){
 					setTimeout(function(){
 						game.distributeCard('bank', true);
 						game.addCount(game.count);
+						game.count.removeChildAt(game.count);
 					}, 750);
 				}, 750);
 			}, 750);
