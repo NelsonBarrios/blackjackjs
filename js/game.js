@@ -253,7 +253,7 @@ function init(){
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
-			game.addCount(0);
+			game.addCount(0).removeAllChildren();
 			var index = rand(0, this.deck.length - 1);
 			var card = this.deck[index];
 			if(hidden) card.hidden = true;
