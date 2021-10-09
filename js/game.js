@@ -297,7 +297,7 @@ function init(){
 				createjs.Tween.get(card)
 					.to({x: 50 * player.deck.length, y: 100}, 750, createjs.Ease.getPowInOut(1));
 				player.cardsContainer.x -= 20;
-				//this.addCount(this.totalC);
+				this.addCount(this.totalC);
 				if(this.deckValue(player.deck) > 21)
 					player.lose();
 			}
@@ -395,7 +395,7 @@ function init(){
 		check: function(){
 			var bankScore = this.deckValue(bank.deck);
 			var playerScore = this.deckValue(player.deck);
-			this.addCount(this.totalC);
+			
 			if(bankScore === 21 && bank.deck.length === 2)
 				bank.blackjack = true;
 			if(playerScore === 21 && player.deck.length === 2)
@@ -434,6 +434,7 @@ function init(){
 				this.cardsContainer.children[1].image.src = imgs.cards.get(this.deck[1].suit, this.deck[1].value);
 
 			var total = game.deckValue(this.deck);
+			//this.addCount(this.totalC);
 			if(total < 17){
 				game.distributeCard('bank');
 				if(game.deckValue(this.deck) < 17)
