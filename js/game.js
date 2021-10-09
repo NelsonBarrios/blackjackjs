@@ -200,7 +200,7 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
-			game.count.removeAllChildren();
+			game.count.removeAllChildren(game.count);
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
