@@ -200,7 +200,6 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
-			game.addCount(undefined);
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
@@ -212,7 +211,6 @@ function init(){
 					}, 750);
 				}, 750);
 			}, 750);
-			game.addCount().removeAllChildren();
 		},
 
 		buildDeck: function(){
