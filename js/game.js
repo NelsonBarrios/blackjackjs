@@ -141,6 +141,7 @@ function init(){
 					localStorage.setItem('BlackJackJs-userName', player.name.value);
 					localStorage.setItem('BlackJackJs-funds', '1000');
 					localStorage.setItem('BlackJackJs-chips', JSON.stringify(player.chips));
+					//registrar in registeSound()
 					var myAudio = document.getElementById("play");
 					myAudio.paused ? myAudio.play() : myAudio.pause();
 					game.start();
@@ -162,7 +163,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
-			//this.addCount();
+			this.addCount(this.totalC);
 		},
 
 		go: function(){
@@ -392,6 +393,7 @@ function init(){
 		},
 		
 		check: function(){
+			
 			var bankScore = this.deckValue(bank.deck);
 			var playerScore = this.deckValue(player.deck);
 			
@@ -433,7 +435,6 @@ function init(){
 				this.cardsContainer.children[1].image.src = imgs.cards.get(this.deck[1].suit, this.deck[1].value);
 
 			var total = game.deckValue(this.deck);
-			game.addCount(game.totalC);
 			if(total < 17){
 				game.distributeCard('bank');
 				if(game.deckValue(this.deck) < 17)
