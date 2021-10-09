@@ -236,12 +236,13 @@ function init(){
 					console.log(card);
 			});
 			console.log(total);
+			
+			total; //mostrar total contado
 			var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
 				stage.addChild(count);
 				stage.update();
-			return total; //mostrar total contado
 		},
 
 		// addCount: function (total) {
