@@ -171,7 +171,6 @@ function init(){
 				game.inProgress = true;
 				player.betted = true;
 				this.message.text.text = '';
-				this.addCount().removeAllChildren();
 				this.new();
 			}
 			else if(!player.dealt)
