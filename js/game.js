@@ -201,7 +201,7 @@ function init(){
 
 		new: function(){
 			bank.cardsContainer.x = player.cardsContainer.x = 450;
-			game.addCount(null) = null;
+			game.addCount(null);
 			this.distributeCard('player');
 			setTimeout(function(){
 				game.distributeCard('player');
