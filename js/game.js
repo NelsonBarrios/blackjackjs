@@ -234,10 +234,7 @@ function init(){
 				if(card.value === 'A')
 					total += 11;
 			});
-			console.log(total);
 			this.totalC = total;
-			console.log(this.totalC);
-			this.addCount(this.totalC);
 			return total; //mostrar total contado
 			
 		},
@@ -398,7 +395,7 @@ function init(){
 		check: function(){
 			var bankScore = this.deckValue(bank.deck);
 			var playerScore = this.deckValue(player.deck);
-
+			this.addCount(this.totalC);
 			if(bankScore === 21 && bank.deck.length === 2)
 				bank.blackjack = true;
 			if(playerScore === 21 && player.deck.length === 2)
