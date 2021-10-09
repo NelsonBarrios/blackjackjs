@@ -251,7 +251,7 @@ function init(){
 			stage.addChild(game.count);
 			stage.update();
 			console.log("entre ultimo");
-			game.count.removeAllChildren();
+			game.count.removeChildAt(game.count);
 		},
 
 		distributeCard: function(to, hidden = false){ //distribute of cards and deleting it
