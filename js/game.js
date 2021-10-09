@@ -28,7 +28,7 @@ function init(){
 		buttonContainer: false,
 		dealtChipContainer: false,
 		inProgress: false,
-		totalC: 0,
+		count: 0,
 		dealt: {
 			blue: 0,
 			black: 0,
@@ -207,7 +207,7 @@ function init(){
 					game.distributeCard('bank');
 					setTimeout(function(){
 						game.distributeCard('bank', true);
-						game.addCount(game.totalC);
+						game.addCount(game.count);
 					}, 750);
 				}, 750);
 			}, 750);
@@ -244,11 +244,11 @@ function init(){
 
 		addCount: function (number) {
 			console.log("entre primero");
-			count.removeAllChildren();
-			var count = new createjs.Text(number, '30px Arial', '#fff');
+			thisgame.count.removeAllChildren();
+			game.count = new createjs.Text(number, '30px Arial', '#fff');
 				count.x = 700;
 				count.y = 410;
-			stage.addChild(count);
+			stage.addChild(game.count);
 			stage.update();
 			console.log("entre ultimo")
 		},
