@@ -208,7 +208,8 @@ function init(){
 					setTimeout(function(){
 						game.distributeCard('bank', true);
 						game.addCount(game.count);
-						game.count.removeChildAt(game.count);
+
+						game.count.removeAllChildren();
 					}, 750);
 				}, 750);
 			}, 750);
