@@ -15,5 +15,3 @@ Click on a chip to bet and start playing !
 **Double**  
 **Insurance**  
 **Give up**  
-
-Thanks to [Kenney Vleugels](http://www.kenney.nl) for the assets!  
