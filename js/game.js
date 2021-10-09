@@ -243,7 +243,7 @@ function init(){
 			
 		},
 
-		addCount: function (total) {
+		addCount: function (ejemplo) {
 			var count = new createjs.Text(total, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
