@@ -297,7 +297,7 @@ function init(){
 				createjs.Tween.get(card)
 					.to({x: 50 * player.deck.length, y: 100}, 750, createjs.Ease.getPowInOut(1));
 				player.cardsContainer.x -= 20;
-
+				//this.addCount(this.totalC);
 				if(this.deckValue(player.deck) > 21)
 					player.lose();
 			}
