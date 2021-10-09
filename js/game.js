@@ -208,8 +208,6 @@ function init(){
 					setTimeout(function(){
 						game.distributeCard('bank', true);
 						game.addCount(game.count);
-
-						game.count.removeAllChildren();
 					}, 750);
 				}, 750);
 			}, 750);
@@ -399,7 +397,9 @@ function init(){
 		},
 		
 		check: function(){
-			
+
+
+			game.count.removeAllChildren();
 			var bankScore = this.deckValue(bank.deck);
 			var playerScore = this.deckValue(player.deck);
 			
