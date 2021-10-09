@@ -28,7 +28,7 @@ function init(){
 		buttonContainer: false,
 		dealtChipContainer: false,
 		inProgress: false,
-		total: 0,
+		totalC: 0,
 		dealt: {
 			blue: 0,
 			black: 0,
@@ -235,15 +235,15 @@ function init(){
 					total += 11;
 			});
 			console.log(total);
-			stage.addChild(total);
-				stage.update();
-				this.addCount(total)
+			this.totalC = total;
+			console.log(totalC);
+			addCount(this.totalC)
 			return total; //mostrar total contado
 			
 		},
 
-		addCount: function (total) {
-			var count = new createjs.Text(total, '30px Arial', '#fff');
+		addCount: function (number) {
+			var count = new createjs.Text(number, '30px Arial', '#fff');
 				count.x = 650;
 				count.y = 410;
 			stage.addChild(count);
