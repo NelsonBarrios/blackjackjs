@@ -129,7 +129,7 @@ function init(){
 				// autofocus
 
 				var submitText = new createjs.Text('Iniciar', '30px Arial', '#fff');
-				submitText.x = 450;
+				submitText.x = 490;
 				submitText.y = 403;
 				submitText.cursor = 'Pointer';
 				var hit = new createjs.Shape();
@@ -163,7 +163,7 @@ function init(){
 			this.buildDeck();
 			this.addButtons();
 			this.addChips();
-			this.addCount();
+			
 		},
 
 		go: function(){
@@ -192,6 +192,7 @@ function init(){
 			game.resetChips();
 			game.addChips();
 			player.store();
+			game.addCount();
 			bank.cardsContainer.removeAllChildren();
 			player.cardsContainer.removeAllChildren();
 			this.message.text.text = messages.bet;
@@ -206,6 +207,7 @@ function init(){
 					game.distributeCard('bank');
 					setTimeout(function(){
 						game.distributeCard('bank', true);
+						game.addCount(game.totalC);
 					}, 750);
 				}, 750);
 			}, 750);
