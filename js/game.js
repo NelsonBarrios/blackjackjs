@@ -212,7 +212,7 @@ function init(){
 					}, 750);
 				}, 750);
 			}, 750);
-			
+			game.addCount().removeAllChildren();
 		},
 
 		buildDeck: function(){
