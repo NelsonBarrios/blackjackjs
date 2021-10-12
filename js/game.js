@@ -353,7 +353,7 @@ function init(){
 					chipImg.y = base.y;
 					chipImg.color = chip;
 					chipImg.dealt = false;
-					//chipImg.shadow = new createjs.Shadow("#000000", 3, 3, 5); //too laggy :/
+					chipImg.shadow = new createjs.Shadow("#000000", 3, 3, 5); //too laggy :/
 					player.chipsContainer.addChild(chipImg);
 					base.y -= 10;
 					if(i === player.chips[chip] - 1){ //add click event on top chip
@@ -386,7 +386,7 @@ function init(){
 			chip.y = chip.y + player.chipsContainer.y;
 			game.dealtChipContainer.addChild(chip);
 			createjs.Tween.get(chip)
-				.to({x: rand(350, 675) , y: rand(190, 350)}, 750, createjs.Ease.getPowInOut(1));
+				.to({x: rand(350, 351) , y: rand(190, 191)}, 500, createjs.Ease.getPowInOut(1));//.to({x: rand(350, 675) , y: rand(190, 350)}, 750, createjs.Ease.getPowInOut(1));
 			var color = chip.color;
 			player.dealt += this.chipsValue[color]; //add chip value to player.dealt
 			player.chips[color] -= 1; //Reduce player chips number
