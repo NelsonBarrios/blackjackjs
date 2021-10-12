@@ -16,13 +16,13 @@ function init(){
 		},
 		startContainer: false,
 		buttons: [
-			new Button('Pedír', '#fff', 100, 100, () => player.hit()),
-			new Button('Pararse', '#fff', 200, 100, () => player.stand()),
+			new Button('Pedír', '#f6ff00', 100, 100, () => player.hit()),
+			new Button('Pararse', '#f6ff00', 200, 100, () => player.stand()),
 			new Button('Comenzar', '#fff', 935, -430, () => game.go()),
-			new Button('Seguro', '#fff', 100, -80, () => player.insure()),
+			new Button('Seguro', '#f6ff00', 100, -80, () => player.insure()),
 			//new Button('Split', '#fff', 100, -40, () => l('split')),
-			new Button('Doblar', '#fff', 100, -40, () => player.double()),
-			new Button('Abandonar', '#fff', 100, 0, () => player.giveUp()),
+			new Button('Doblar', '#f6ff00', 100, -40, () => player.double()),
+			new Button('Abandonar', '#f6ff00', 100, 0, () => player.giveUp()),
 			new Button('Nuevo juego', '#fff', 100, -490, () => game.reset())
 		],
 		buttonContainer: false,
