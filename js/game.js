@@ -315,7 +315,7 @@ function init(){
 			stage.addChild(this.buttonContainer);
 
 			this.buttons.forEach(function(b){
-				var button = new createjs.Text(b.text, '30px Brush Script MT', b.color);
+				var button = new createjs.Text(b.text, '30px Alex Brush', b.color);
 				button.x = b.x;
 				button.y = b.y;
 				var hit = new createjs.Shape();
