@@ -243,7 +243,7 @@ function init(){
 		},
 
 		addCount: function (number) {
-			game.count = new createjs.Text(number, '30px Arial', '##f6ff00');
+			game.count = new createjs.Text(number, '30px Arial', '#808080');
 				game.count.x = 700;
 				game.count.y = 410;
 			stage.addChild(game.count);
