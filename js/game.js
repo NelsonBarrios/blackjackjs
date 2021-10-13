@@ -353,7 +353,7 @@ function init(){
 					chipImg.y = base.y;
 					chipImg.color = chip;
 					chipImg.dealt = false;
-					//chipImg.shadow = new createjs.Shadow("#000000", 3, 3, 5); //too laggy :/
+					chipImg.shadow = new createjs.Shadow("#f6ff00", 3, 3, 5);//chipImg.shadow = new createjs.Shadow("#000000", 3, 3, 5); //too laggy :/
 					player.chipsContainer.addChild(chipImg);
 					base.y -= 10;
 					if(i === player.chips[chip] - 1){ //add click event on top chip
