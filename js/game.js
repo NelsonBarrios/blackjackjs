@@ -243,7 +243,7 @@ function init(){
 		},
 
 		addCount: function (number) {
-			game.count = new createjs.Text(number, '30px Arial', '#fff');
+			game.count = new createjs.Text(number, '30px Arial', '##f6ff00');
 				game.count.x = 700;
 				game.count.y = 410;
 			stage.addChild(game.count);
@@ -528,7 +528,7 @@ function init(){
 						//update graphic dealtcontainer
 						for(let i=0; i<game.dealt[chip]; i++){
 							var chipImg = new createjs.Bitmap(imgs.chips.get(chip, 'side'));
-							chipImg.x = rand(510, 510);//510, 510) , y: rand(348, 348
+							chipImg.x = rand(510, 510);
 							chipImg.y = rand(340, 340);
 							chipImg.color = chip;
 							chipImg.dealt = true;
