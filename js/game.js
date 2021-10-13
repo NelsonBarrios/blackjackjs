@@ -386,7 +386,7 @@ function init(){
 			chip.y = chip.y + player.chipsContainer.y;
 			game.dealtChipContainer.addChild(chip);
 			createjs.Tween.get(chip)
-				.to({x: rand(520, 520) , y: rand(370, 370)}, 250, createjs.Ease.getPowInOut(1));//.to({x: rand(350, 675) , y: rand(190, 350)}, 750, createjs.Ease.getPowInOut(1));
+				.to({x: rand(520, 520) , y: rand(340, 340)}, 250, createjs.Ease.getPowInOut(1));//.to({x: rand(350, 675) , y: rand(190, 350)}, 750, createjs.Ease.getPowInOut(1));
 			var color = chip.color;
 			player.dealt += this.chipsValue[color]; //add chip value to player.dealt
 			player.chips[color] -= 1; //Reduce player chips number
@@ -529,7 +529,7 @@ function init(){
 						for(let i=0; i<game.dealt[chip]; i++){
 							var chipImg = new createjs.Bitmap(imgs.chips.get(chip, 'side'));
 							chipImg.x = rand(510, 510);//510, 510) , y: rand(348, 348
-							chipImg.y = rand(348, 348);
+							chipImg.y = rand(340, 340);
 							chipImg.color = chip;
 							chipImg.dealt = true;
 							game.dealtChipContainer.addChild(chipImg);
